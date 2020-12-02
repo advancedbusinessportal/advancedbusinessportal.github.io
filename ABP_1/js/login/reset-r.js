@@ -1,0 +1,1 @@
+document.getElementById("Reset").addEventListener("click", resetForm, false);
