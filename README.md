@@ -36,7 +36,7 @@ In this page, you will be able to see list of all the employees and their basic 
 
 ## Invoice
 
-You can search any invoice by the transaction ID. You can also print/save as pdf the invoice if requires. For example, if a customer comes and asks for a receipt/bill for their purchase and if you know the transacation id, you can easily search from the transaction id and pull up the invoice for their purchase and print a copy for the customer.
+You can search any invoice by the transaction ID. You can also print/save as pdf the invoice if requires. For example, if a customer comes and asks for a receipt/bill for their purchase and if you know the transaction id, you can easily search from the transaction id and pull up the invoice for their purchase and print a copy for the customer.
 
 ## Management
 
