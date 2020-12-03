@@ -1,6 +1,6 @@
-#PRESENTATION
+### PRESENTATION
 
-##Introduction: 
+## Introduction: 
 
 With Advance Business Portal in place, many corporate and other types of businesses can manage various different things at one place. ABP helps the company to reduce the time and effort to improve the productivity and efficiency. At advance, we work with over 600 businesses across Canada and have a deep understanding of the upcoming needs of the businesses and putting it in the place. To reduce the cost of the company, we offer one portal, in which one can access all the information one might need to do their work. Using ABP, organizations can manage their inventory,  attend meetings, manage their profile, and track the sales record among with many other features. 
 
