@@ -1,7 +1,644 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
-</html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>PRESENTATION</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="8f05b9a6-4379-4913-8cae-fa0f63fdc51f" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📽️</span></div><h1 class="page-title">PRESENTATION</h1></header><div class="page-body"><h1 id="0c7c8540-3db5-4053-a2c9-ccc94119350b" class="">Start :</h1><p id="130a5ed7-1946-4773-909c-fd95a0135722" class="">
+</p><p id="93c9598d-6cfc-4202-b13f-e400d370ffaa" class="">Introduction: </p><p id="75f2ac4d-48aa-4ceb-82dc-943acb216c9f" class="">With Advance Business Portal in place, many corporate and other types of businesses can manage various different things at one place. ABP helps the company to reduce the time and effort to improve the productivity and efficiency. At advance, we work with over 600 businesses across Canada and have a deep understanding of the upcoming needs of the businesses and putting it in the place. To reduce the cost of the company, we offer one portal, in which one can access all the information one might need to do their work. Using ABP, organizations can manage their inventory,  attend meetings, manage their profile, and track the sales record among with many other features. </p><p id="18a26c3d-8b97-4b4f-9f73-ff1c983c7d42" class="">
+</p><h2 id="a9fcf7dc-1146-4a36-9dde-af048c6ce8e7" class="">Description:</h2><p id="7892173c-75be-422a-b204-17b94721f2c6" class="">
+</p><h3 id="c8ed698a-3344-4ab7-87dc-c84459346b0c" class="">Index.html</h3><p id="3ad130b6-e92d-46d3-918a-f8925611b769" class="">This is our main webpage. It has the information about what ABP is and what it offers. In the about section, it recognizes few of our major features such as employee management, sales management, and inventory management. In employee management, we provide a place where all the employees can go to check their portfolio, do their training, reset their passwords, and check their sales stats. In sales management, you can see the daily, monthly and annual sales done by the company as well as the individual employees to decide the future plans and growth of the company. In inventory management, the items available in the store are listed in this feature. You can also add/delete or edit the orders and stocks of items listed. Below that, we have the list of the features we offer that makes us different than other portals followed by some numbers to show the great support and work of our team and the accomplishments. After that, we talk about how our web portal is a secured way to deliver applications , services and links in an interactive way on a single platform. The main feature of our web portal is the privacy, as it works as a private resource that can only be accessed unless you have unique credentials and gathers information from various resources. We run the applications on a local and secure server to eliminate/minimize the threat of data leakage or data compromising. Following that, we have our team with their titles and quotes that motivates us to grow more.</p><p id="4f840b31-40e3-44a5-93b5-ec45fecfd4a9" class="">
+</p><h3 id="fb2711c1-2ad8-4c7b-83c7-60319cbf6607" class="">Dashboard</h3><p id="8fb6c6e8-242c-446f-88d5-4b59e4654b4c" class="">This page comes up once you sign-in into your portal. It has a top navigation bar and side navigation bar. At the right corner of the top navigation bar, it has user&#x27;s username and their profile picture on which if you click it, it gives you an option to log out and go back to the log in page. In the side navigation bar as well as body, it has different options which can be accessed by the employees. It has the options as following: Profile, Inventory, Sales Report, Meeting Room, Employees, Invoice, and Management. In the body, we also have an option to log out. At the top of the side navigation bar, we have a button of ABP which takes us to the main page, Index page. </p><p id="acaf08c6-6995-4bfc-8b72-c1bf8f3e2ae9" class="">
+</p><h3 id="853e3b41-df11-4513-89de-03078d307b4f" class="">Profile</h3><p id="170fd2e9-0cea-4ae2-b91d-d7d414618e17" class="">When you click on the profile, it opens up your personal information such as your first name, last name, address, email address, date of birth, phone number, employee id, title, and date of hire. You can also update your personal information such as address, email address and phone number. It also has your profile picture on the top of the page. You can access the profile page through the side navigation bar as well.</p><p id="97969e7d-52c8-4a04-b1b3-80c590bc8c40" class="">
+</p><h3 id="75933f90-341c-444b-b15b-a3a1a1ce9c88" class="">Inventory</h3><p id="ecd7b478-0f2e-444e-af35-013ae46632ea" class="">When you click on the inventory, it leads you to the inventory management page which ahs four options to choose: Product list, Add product, update product, and back to dashboard. Each button ahs their own specific reason. For example, product list will lead you to a new page which has the list of all the products available in stock. Similarly you can add or update a product in their respective buttons.</p><p id="14eef167-8598-44d7-a0cd-d379383b8dde" class="">
+</p><h3 id="84afa666-497b-422f-8736-01176a393122" class="">Sales Report</h3><p id="29a20da8-a5a1-4f3b-b030-62d37bc5a6f6" class="">This page includes all the records of the sales that has been done up to date. You can view how the company and/or an individual employee is doing.</p><p id="777dc52b-f8c1-45c7-a752-7b97c85dd78c" class="">
+</p><h3 id="c6c2a01d-2e16-4930-9072-3498146e6d6d" class="">Meeting Room</h3><p id="75395c8c-2d07-48f0-bc2a-db78bf23383b" class="">This page has four different meeting rooms for different purposes. Four meeting rooms are: Decision Accelerator, Ideation Zone, Creative Arena and Social Sphere. Decision Accelerator is for the executive members to have any important discussion. Ideation Zone and Creative Arena are used to have a meeting to create new ideas and changes the company needs to improve the qualify and quantity of the work. Social Sphere is used to have social meetings at various events.</p><p id="e06d0f2f-8116-425d-a5eb-4dfb983fd9e9" class="">
+</p><h3 id="30f1dc23-f637-4cee-a933-6128baf788a4" class="">Employees</h3><p id="eb451cb1-a2bf-46cb-84c3-7bb903606188" class="">In this page, you will be able to see list of all the employees and their basic information such as phone number, email, position, etc. So if you want to contact someone from the store, you can find them in the employee list and get the contact information. </p><p id="f0a7226e-ce41-474f-819e-fa176f8355db" class="">
+</p><h3 id="b9dfbe7d-457d-40ec-88df-0ff2d85e3438" class="">Invoice</h3><p id="2ebfb68c-2281-40aa-99a3-4a106ee0baf6" class="">You can search any invoice by the transaction ID. You can also print/save as pdf the invoice if requires. For example, if a customer comes and asks for a receipt/bill for their purchase and if you know the transacation id, you can easily search from the transaction id and pull up the invoice for their purchase and print a copy for the customer.</p><p id="42d4c24f-ea26-437a-bed4-ba17eed47f74" class="">
+</p><h3 id="439a71ad-cae5-4a80-b138-fd303d2f26a9" class="">Management</h3><p id="4f158e82-3634-468b-980d-49ec6174a640" class="">In this page, you will find the four executive members of the company and their titles with their pictures as well.</p><p id="b49a203b-cdb1-4e29-bc67-2c597ae60ad1" class="">
+</p><h3 id="0a82f570-c84e-44ed-9404-0db9e315c38f" class="">Logout</h3><p id="00944de5-4cba-45c3-bcae-845d1434edfc" class="">This button will take you back to login page.</p><p id="1d55309f-ec8c-4358-a902-b6e1b411a163" class="">
+</p><h1 id="220ae197-ca6b-4903-817d-a9efe030e639" class="">Software used:</h1><p id="767fc817-3b3e-4e8d-ba57-b54a68d62b5f" class="">
+</p><p id="cbcdfbfb-5578-4c12-8771-a7b3f6129a2a" class="">For database, MAMP (MYSQL, PHP - phpMyAdmin local server), putty</p><p id="57a29b56-52f6-4603-a093-4c7bbff3baa8" class="">For coding: Sublime Text Editor, Visual Studio Code, Atom</p><p id="8a1376ec-1436-4ba2-b613-48a86cc7a2a8" class="">File management: WinSCP</p><p id="fd438ba8-8ab6-480c-8e37-c13e37e4c9a5" class="">Notion, Tonido: Project Management</p><p id="64be17ed-5dd4-4fe5-b6af-52ac380e9920" class="">For meeting integration: Zoom meeting</p><p id="8bf5626f-9086-49af-9f60-3d8ac551fd64" class="">google chrome, GitHub desktop</p><p id="671c38d5-9a65-42d7-bd5b-c4658c011948" class="">For photo editing: Photoshop</p><p id="89bfaf39-ff47-4e37-b059-5eea93016e37" class="">For photos and illustrations : Adobe Stock </p><h1 id="12e07539-e86f-4ebb-8297-ff6d6cd0b9a1" class="">Authors:</h1><ol id="9c40bdc6-c0fd-4573-860b-9b9f4a083c8f" class="numbered-list" start="1"><li>Harsh Vaghasiya</li></ol><ol id="1fd36593-587f-4836-b9d5-5357cf2818a5" class="numbered-list" start="2"><li>Prerak Patel</li></ol><ol id="7d72323f-e168-4221-8b7b-15328bb8b45d" class="numbered-list" start="3"><li>Rushikumar Patel</li></ol><ol id="92d546f3-856c-4fe1-9ff9-f139cfc729ce" class="numbered-list" start="4"><li>Sahilkumar Gopani</li></ol><h1 id="863e16d8-2681-4fab-a7ce-440f9d1d86e6" class="">Version:</h1><p id="b8efc3ab-eb97-4f6f-be07-4fca14142570" class="">ABP 1.0</p><p id="720013e6-ae58-4ffb-ae12-0083fcce23cd" class="">
+</p><p id="6c85d1a4-f67f-4383-a974-4c3a671cf217" class="">
+</p><p id="7b5eb496-5814-48d2-9db1-5565366c5d09" class="">
+</p><figure id="edd237e6-0e77-4de3-8a91-feba8383f0cf" class="link-to-page"><a href="https://www.notion.so/Discussion-edd237e60e774de38a91feba8383f0cf"><span class="icon">🦜</span>Discussion</a></figure></div></article></body></html>
