@@ -65,9 +65,11 @@ For photos and illustrations : Adobe Stock
 # Authors:
 
 1. [Harsh Vaghasiya](https://www.instagram.com/vharsh43)
-2.  [Prerak Patel](https://www.instagram.com/patelprerak1010)
-3.  [Rushikumar Patel](https://www.instagram.com/ruz_patel29)
-4.  [Sahilkumar Gopani](https://www.instagram.com/sahil_gopani)
+2.  [Jeel Kathiriya](https://www.instagram.com/kathiriyajeel_)
+3.  [Prerak Patel](https://www.instagram.com/patelprerak1010)
+4.  [Rushikumar Patel](https://www.instagram.com/ruz_patel29)
+5.  [Sahilkumar Gopani](https://www.instagram.com/sahil_gopani)
+
 
 ## Version:
 ABP v1.0
